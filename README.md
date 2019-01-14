@@ -1,42 +1,31 @@
-# REGSAVE: extract and store regression results
+# TEXTFILELOAD: import data from text files in a user-friendly manner
 
-- Current version: `1.4.4 16may2018`
+- Current version: `1.0.1 10jul2010`
 - Jump to: [`updates`](#recent-updates) [`install`](#install) [`description`](#description) [`author`](#author)
 
 -----------
 
 ## Updates:
 
-* **December 31, 2018**
-  - Added the help file `regsave_tbl.hlp` to installation package
-  - Added error catching code to `regsave_tbl.ado`
+* **July 19, 2010**
+  - Updated to correct snprintf(%ld) formatting for longs
 
 ## Install:
 
-Type `which regsave` at the Stata prompt to determine which version you have installed. To install the most recent version of `regsave`, copy/paste the following line of code:
-
-```
-net install regsave, from("https://raw.githubusercontent.com/reifjulian/regsave/master") replace
-```
-
-To install the version that was uploaded to SSC, copy/paste the following line of code:
-```
-ssc install regsave, replace
-```
-
-These two versions are typically synced, but occasionally the SSC version may be slightly out of date.
+The source code is stored in /src
 
 ## Description: 
 
-`regsave` is a [Stata](http://www.stata.com) command that fetches estimation results from `e()` and stores them in "wide" format (default) or "table" format:
+TextFileLoad is an ANSI-compliant class that allows a user to easily import a text file. Data can be loaded by column name or number. Loading by name is advantageous because it allows the order of the columns in the input file to change without any subsequent effect on the analysis.
 
-- By default, results are stored in wide format. Use this format when you want to further analyze your regression results using Stata.
+This class automatically does type conversions. A user is allowed, for example, to load a column of integers into a vector of strings. In cases where there is no logical conversion (e.g., loading a column of strings into a vector of booleans), the data are converted to 0's.
 
-- If you specify the `table()` option, results are stored in table format.  You can then outsheet those results to a text file, or use texsave (if installed) to output your table in LaTeX format (see example 6 below). Use the `table()` option when you want to create a publication-quality table.
-
-The helper command `regsave_tbl` converts the dataset in memory from wide format to table format.
-
-For more details, see the Stata help file included in this package.
+**USER OPTIONS**
+There are several options available to the user when importing the data:
+1. delimiter (default is tab-delimited)
+2. header row (default assumes first row is the header row)
+3. Load by column number or column name
+  - If loading by column name, user can specify case sensitivity (default is no case sensitivity)
 
 ## Author:
 
