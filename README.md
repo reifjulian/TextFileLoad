@@ -20,7 +20,8 @@ TextFileLoad is an ANSI-compliant class that allows a user to easily import a te
 
 This class automatically does type conversions. A user is allowed, for example, to load a column of integers into a vector of strings. In cases where there is no logical conversion (e.g., loading a column of strings into a vector of booleans), the data are converted to 0's.
 
-**USER OPTIONS**
+**USER OPTIONS**:
+
 There are several options available to the user when importing the data:
 1. delimiter (default is tab-delimited)
 2. header row (default assumes first row is the header row)
