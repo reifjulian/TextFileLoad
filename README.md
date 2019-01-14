@@ -8,15 +8,15 @@
 ## Updates:
 
 * **July 19, 2010**
-  - Updated to correct snprintf(%ld) formatting for longs
+  - Updated to correct ``snprintf(%ld)`` formatting for longs
 
 ## Install:
 
-The source code is stored in /src
+The source code is stored in /src.
 
 ## Description: 
 
-TextFileLoad is an ANSI-compliant class that allows a user to easily import a text file. Data can be loaded by column name or number. Loading by name is advantageous because it allows the order of the columns in the input file to change without any subsequent effect on the analysis.
+TextFileLoad is an ANSI-compliant program written in C++ that allows a user to easily import a text file. Data can be loaded by column name or number. Loading by name is advantageous because it allows the order of the columns in the input file to change without any subsequent effect on the analysis.
 
 This class automatically does type conversions. A user is allowed, for example, to load a column of integers into a vector of strings. In cases where there is no logical conversion (e.g., loading a column of strings into a vector of booleans), the data are converted to 0's.
 
