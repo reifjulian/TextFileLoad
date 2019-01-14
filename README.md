@@ -26,7 +26,7 @@ There are several options available to the user when importing the data:
 1. delimiter (default is tab-delimited)
 2. header row (default assumes first row is the header row)
 3. Load by column number or column name
-  - If loading by column name, user can specify case sensitivity (default is no case sensitivity)
+    - If loading by column name, user can specify case sensitivity (default is no case sensitivity)
 
 ## Author:
 
